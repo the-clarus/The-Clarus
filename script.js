@@ -1,35 +1,35 @@
 document.addEventListener('DOMContentLoaded', function() {
     const blogPosts = [
         {
-            title: 'Exploring the Future',
-            content: 'The world is changing faster than ever before. Let’s dive into the technologies shaping tomorrow.',
+            title: 'Lorem ipsum dolor sit amet',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             url: 'blog.html' // URL to the blog post page
         },
         {
-            title: 'AI and You',
-            content: 'Artificial Intelligence is not just a buzzword. Learn how it’s revolutionizing our everyday lives.',
-            url: 'blog.html' // URL to the blog post page
-        },
-        {
-            title: 'AI and You',
-            content: 'Artificial Intelligence is not just a buzzword. Learn how it’s revolutionizing our everyday lives.',
-            url: 'blog.html' // URL to the blog post page
-        },
-        {
-            title: 'AI and You',
-            content: 'Artificial Intelligence is not just a buzzword. Learn how it’s revolutionizing our everyday lives.',
-            url: 'blog.html' // URL to the blog post page
-        },
-        {
-            title: 'AI and You',
-            content: 'Artificial Intelligence is not just a buzzword. Learn how it’s revolutionizing our everyday lives.',
-            url: 'blog.html' // URL to the blog post page
-        },
-        {
-            title: 'The Metaverse',
-            content: 'A deep dive into the virtual worlds that are becoming as real as our physical reality.',
-            url: 'blog.html' // URL to the blog post page
-        }
+          title: 'Lorem ipsum dolor sit amet',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          url: 'blog.html' // URL to the blog post page
+      },
+      {
+        title: 'Lorem ipsum dolor sit amet',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        url: 'blog.html' // URL to the blog post page
+    },
+    {
+      title: 'Lorem ipsum dolor sit amet',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      url: 'blog.html' // URL to the blog post page
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    url: 'blog.html' // URL to the blog post page
+},
+{
+  title: 'Lorem ipsum dolor sit amet',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  url: 'blog.html' // URL to the blog post page
+},
     ];
 
     const blogContainer = document.querySelector('.blog-posts');

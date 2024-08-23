@@ -43,10 +43,10 @@ function filterBlogs() {
 
 function redirectToRandomBlog() {
     const blogLinks = [
-        "blog1.html",  // Replace with actual blog URLs
-        "blog2.html",
-        "blog3.html",
-        "blog4.html"
+        "blog.html",  // Replace with actual blog URLs
+        "blog.html",
+        "blog.html",
+        "blog.html"
         // Add more blog URLs as needed
     ];
 
@@ -56,12 +56,12 @@ function redirectToRandomBlog() {
 
 
 //START no selection or right click
-// document.addEventListener('contextmenu', function(event) {
-//    event.preventDefault();
-//});
-//document.addEventListener('selectstart', function(event) {
- //   event.preventDefault();
-//});
+ document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});
+document.addEventListener('selectstart', function(event) {
+    event.preventDefault();
+});
 //END no selection or right click
 
 // Easter egg activation
