@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="dogcow.png" type="image/x-icon">
+    <title>CLARUS - Scribbles</title>
+    <link rel="stylesheet" href="ded.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+</head>
+<body>
+ 
+    <header>
+        <h1 class="hoverable">『 CLARUS MUNDUS 』</h1>
+        <nav class="hoverable">
+            <ul>
+                <li><a href="main.html" class="hoverable">HOME</a></li>
+                <li><a href="scribbles.html" class="hoverable">SCRIBBLES</a></li>
+                <li><a href="about.html" class="hoverable">ABOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section class="blog-section2">
+        <h2>THESE SCRIBBLES</h2>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="search for the scribe's chronicles..." onkeyup="filterBlogs()">
+            <button class="futuristic-button" onclick="redirectToRandomBlog()">CONVEY ME TO YON BLOG OF CHANCE</button>
+                
+        </div>
+        <div class="blog-posts" id="blogList">
+            <!-- Example Blog Post -->
+            <div class="blog-post">
+                <a href="#" class="blog-link">
+                    <h3>Blog Post Title 1</h3>
+                    <p>Published on: 2024-08-22</p>
+                </a>
+            </div>
+            <div class="blog-post">
+                <a href="#" class="blog-link">
+                    <h3>Blog Post Title 2</h3>
+                    <p>Published on: 2024-08-20</p>
+                </a>
+            </div>
+            <!-- More blog posts here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 THE CLARUS. Made with LOTS OF CAFFEINE ☕.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>

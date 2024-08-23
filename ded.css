@@ -1,0 +1,582 @@
+/* Body & Basic Elements */
+body {
+    cursor: url(https://cdn.custom-cursor.com/db/4732/32/arrow2699.png), default !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background-color: #302b63;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.hoverable, .blog-post, .futuristic-button {
+    cursor: url(https://cdn.custom-cursor.com/db/4731/32/arrow2699.png), pointer !important;
+}
+
+body.holding .hoverable {
+    cursor: url(https://cdn.custom-cursor.com/db/4731/32/arrow2699.png), pointer !important;
+}
+
+header {
+    position: fixed; /* Makes the header stick to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px; /* Adjusted for smaller screens */
+    text-align: center;
+    z-index: 1000;
+    transition: background-color 0.5s ease, border-bottom 0.5s ease;
+}
+
+header h1 {
+    font-family: 'Press Start 2P', sans-serif;
+    /*margin: 0;*/
+    font-size: 1.9rem; /* Adjusted font size for mobile */
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+    transform: translateY(-20px); /* Hidden off-screen above the header */
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-size: 1.2rem; /* Adjusted font size for mobile */
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+}
+
+header h1:hover + nav ul,
+nav ul:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 95vh; /* Adjusted height for smaller screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+    margin-top: 80px; /* Adjusted to ensure content is below the header */
+}
+
+.hero-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.9rem; /* Adjusted font size for mobile */
+    margin-top: -30px;
+    margin-bottom: 8%;
+    animation: glow 2s infinite alternate;
+}
+
+.upper-post h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.9rem; /* Adjusted font size for mobile */
+    
+    animation: glow 2s infinite alternate;
+}
+
+.abouth2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.9rem; /* Adjusted font size for mobile */
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    animation: glow 2s infinite alternate;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for text readability */
+    padding: 10px; /* Reduced padding for smaller screens */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4); /* Glowing effect */
+}
+
+.hero-text {
+    font-size: 1.2rem; /* Adjusted size for smaller screens */
+    line-height: 1.4;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    animation: fadeIn 2s ease-out;
+}
+
+.hero-section p {
+    font-size: 1.4rem; /* Adjusted size for smaller screens */
+}
+
+/* Blog Section */
+.blog-section {
+    padding: 30px 10px; /* Adjusted padding for smaller screens */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding-top: 100px;
+}
+
+.blog-section2 {
+    padding: 30px 10px; /* Adjusted padding for smaller screens */
+    
+    backdrop-filter: blur(10px);
+    padding-top: 100px;
+}
+.blog-section2 h2 {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-bottom: 20px; /* Adjusted margin for smaller screens */
+    font-size: 2rem; /* Adjusted font size for mobile */
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.blog-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    padding-bottom: 40px; /* Adjusted margin for smaller screens */
+    font-size: 2rem; /* Adjusted font size for mobile */
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.blog-posts {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align items */
+}
+
+.blog-post {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    margin: 10px; /* Reduced margin for smaller screens */
+    padding: 10px; /* Reduced padding for smaller screens */
+    border-radius: 10px;
+    width: 100%; /* Full width on small screens */
+    max-width: 300px; /* Max width for larger screens */
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.blog-post h3 {
+    text-align: center;
+    color: #00ffcc;
+    margin: 0;
+}
+
+.blog-post h3:hover {
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.blog-post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.8), 0 0 25px rgba(0, 255, 204, 0.6);
+}
+
+.blog-link {
+    cursor: url(https://cdn.custom-cursor.com/db/4731/32/arrow2699.png), pointer !important;
+    color: #00ffcc;
+    text-decoration: none;
+    display: block; /* Ensures the entire block is clickable */
+    margin-bottom: 10px;
+}
+
+.blog-link p {
+    color: #ffffff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #00ffcc;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: auto;
+}
+
+/* Animations */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc;
+    }
+    to {
+        text-shadow: 0 0 20px #ffffff, 0 0 30px #00ffcc, 0 0 40px #00ffcc, 0 0 50px #00ffcc;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-posts {
+        flex-direction: column;
+        align-items: center;
+    }
+    .canvas {
+        z-index: -1 !important;
+    }
+    .hero-section {
+        margin-top: 60px; /* Adjusted for smaller screens */
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+.neon-button {
+    background-color: transparent;
+    color: #00ffcc;
+    border: 2px solid #00ffcc;
+    padding: 8px 16px; /* Reduced padding for smaller screens */
+    text-transform: uppercase;
+    font-size: 0.9rem; /* Adjusted font size for mobile */
+    cursor: pointer;
+    transition: color 0.3s, box-shadow 0.3s;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.neon-button:hover {
+    color: #ffffff;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+}
+
+.blog-post {
+    perspective: 1000px;
+}
+
+.blog-post:hover {
+    transform: rotateY(10deg);
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*z-index: 1;*/
+}
+
+/* Header Background Invisible */
+header {
+    background-color: transparent;
+    border-bottom: none;
+}
+
+/* Header Background Visible on Scroll */
+header.scrolled {
+    background: linear-gradient(135deg, rgba(15, 12, 41, 0.8), rgba(48, 43, 99, 0.8), rgba(36, 36, 62, 0.8));
+    border-bottom: 1px solid rgba(0, 255, 204, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 255, 204, 0.2);
+    backdrop-filter: blur(10px); /* Adds a glassmorphism effect */
+    animation: pulse 3s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 10px rgba(0, 255, 204, 0.2), 0 0 20px rgba(0, 255, 204, 0.4);
+    }
+    100% {
+        box-shadow: 0 4px 10px rgba(0, 255, 204, 0.4), 0 0 40px rgba(0, 255, 204, 0.6);
+    }
+}
+
+header.scrolled nav ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Moves into view */
+}
+
+/* Search Bar */
+.search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.5);
+    color: #00ffcc;
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+    transition: box-shadow 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.8);
+}
+
+/* Adjust the layout for small screens */
+@media (max-width: 768px) {
+    #searchInput {
+        width: 90%;
+    }
+}
+
+/* Futuristic Button */
+.futuristic-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #00ffcc;
+    background-color: transparent;
+    border: 2px solid #00ffcc;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4), 0 0 25px rgba(0, 255, 204, 0.2);
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+    margin-top: 20px;
+}
+
+.futuristic-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 255, 204, 0.4), rgba(0, 255, 204, 0.1));
+    transition: all 0.3s ease;
+    z-index: -1;
+    transform: scale(0);
+    border-radius: 50px;
+}
+
+.futuristic-button:hover::before {
+    transform: scale(1.5);
+    opacity: 0;
+}
+
+.futuristic-button:hover {
+    color: #ffffff;
+    box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 60px #00ffcc;
+}
+
+
+
+
+
+
+
+/* Easter Egg Effect */
+body.easter-egg {
+    background: linear-gradient(135deg, #ff0000, #ff9900, #ffcc00);
+    color: #000000;
+}
+
+.hero-content a {
+    margin: 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.hero-content a.futuristic-button {
+    margin-top: 20px;
+}
+
+/* Responsive Design for Hero Section */
+.hero-section {
+    height: 95vh; /* Adjusted height for smaller screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+    margin-top: 80px; /* Adjusted to ensure content is below the header */
+}
+
+.hero-section3 {
+    height: 70vh; /* Adjusted height for smaller screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+    margin-top: 80px; /* Adjusted to ensure content is below the header */
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+}
+
+/* Futuristic Button */
+.futuristic-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #00ffcc;
+    background-color: transparent;
+    border: 2px solid #00ffcc;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4), 0 0 25px rgba(0, 255, 204, 0.2);
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+    margin-top: 20px;
+}
+
+.futuristic-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 255, 204, 0.4), rgba(0, 255, 204, 0.1));
+    transition: all 0.3s ease;
+    z-index: -1;
+    transform: scale(0);
+    border-radius: 50px;
+}
+
+.futuristic-button:hover::before {
+    transform: scale(1.5);
+    opacity: 0;
+}
+
+.futuristic-button:hover {
+    color: #ffffff;
+    box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 60px #00ffcc;
+}
+
+
+ /* Responsive Design */
+ @media (max-width: 768px) {
+   
+
+    
+
+    .futuristic-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+    
+    .futuristic-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+
+.post {
+    background: rgba(0, 0, 0, 0.6); /* Dark background for contrast */
+    color: #00ffcc; /* Futuristic neon color for text */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Space around the content */
+    margin-bottom: 20px; /* Space between posts */
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4), 0 0 25px rgba(0, 255, 204, 0.2); /* Glowing effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.upper-post {
+    background: rgba(0, 0, 0, 0.6); /* Dark background for contrast */
+    color: #00ffcc; /* Futuristic neon color for text */
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    
+    margin-bottom: 20px; /* Space between posts */
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4), 0 0 25px rgba(0, 255, 204, 0.2); /* Glowing effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 100px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.post:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.8), 0 0 40px rgba(0, 255, 204, 0.6); /* Stronger glow on hover */
+}
+
+.post h2 {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    font-size: 1.8rem;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+    margin-bottom: 10px;
+}
+
+.post p {
+    line-height: 1.6; /* Increase line spacing for readability */
+    font-size: 1rem;
+}
+
+/* IMAGE CSS */
+.post-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.4), 0 0 15px rgba(0, 255, 204, 0.2); /* Glowing effect */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.8), 0 0 30px rgba(0, 255, 204, 0.6); /* Stronger glow on hover */
+    cursor: url(https://cdn.custom-cursor.com/db/4731/32/arrow2699.png), pointer !important;
+}
+
+
