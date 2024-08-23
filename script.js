@@ -77,7 +77,7 @@ var stars = [],
 
 // Adjust the number of stars based on screen size
 if (window.innerWidth < 768) {
-    starCount = 50; // Further reduce stars on mobile devices
+    starCount = 25; // Further reduce stars on mobile devices
 }
 
 // Create stars
