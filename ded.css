@@ -430,7 +430,7 @@ body.easter-egg {
     position: relative;
     color: #ffffff;
     margin-top: 80px; 
-
+}
 .hero-section3 {
     height: 70vh; 
     display: flex;
@@ -576,5 +576,4 @@ body.easter-egg {
     transform: scale(1.05); 
     box-shadow: 0 0 20px rgba(0, 255, 204, 0.8), 0 0 30px rgba(0, 255, 204, 0.6); 
     cursor: url(https://cdn.custom-cursor.com/db/4731/32/arrow2699.png), pointer !important;
-}
 }
