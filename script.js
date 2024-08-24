@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
     hiddenIcon.style.right = '20px';
     hiddenIcon.style.width = '4px';
     hiddenIcon.style.height = '4px';
-    hiddenIcon.style.backgroundImage = 'url("dogcow.png")'; // Replace with your icon image
+    hiddenIcon.style.backgroundImage = 'url("IMAGES/dogcow.png")'; // Replace with your icon image
     hiddenIcon.style.backgroundSize = 'contain';
     hiddenIcon.style.cursor = 'url(https://cdn.custom-cursor.com/db/4731/32/arrow2699.png), pointer';
     document.body.appendChild(hiddenIcon);
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     hiddenIcon.addEventListener('click', function() {
         const imagePopup = document.createElement('img');
-        imagePopup.src = 'dogcow.png'; // Replace with your image source
+        imagePopup.src = 'IMAGES/dogcow.png'; // Replace with your image source
         imagePopup.style.position = 'fixed';
         imagePopup.style.top = '50%';
         imagePopup.style.left = '50%';
