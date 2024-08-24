@@ -1,4 +1,3 @@
-/* Body & Basic Elements */
 body {
     cursor: url(https://cdn.custom-cursor.com/db/4732/32/arrow2699.png), default !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,11 +21,11 @@ body.holding .hoverable {
 }
 
 header {
-    position: fixed; /* Makes the header stick to the top */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10px; /* Adjusted for smaller screens */
+    padding: 20px 10px; 
     text-align: center;
     z-index: 1000;
     transition: background-color 0.5s ease, border-bottom 0.5s ease;
@@ -35,7 +34,7 @@ header {
 header h1 {
     font-family: 'Press Start 2P', sans-serif;
     /*margin: 0;*/
-    font-size: 1.9rem; /* Adjusted font size for mobile */
+    font-size: 1.9rem; 
     color: #00ffcc;
     text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
     cursor: pointer;
@@ -47,9 +46,9 @@ nav ul {
     margin: 20px 0 0 0;
     display: flex;
     justify-content: center;
-    opacity: 0; /* Initially hidden */
-    visibility: hidden; /* Initially hidden */
-    transform: translateY(-20px); /* Hidden off-screen above the header */
+    opacity: 0; 
+    visibility: hidden; 
+    transform: translateY(-20px); 
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
 
@@ -60,7 +59,7 @@ nav ul li {
 nav ul li a {
     color: #00ffcc;
     text-decoration: none;
-    font-size: 1.2rem; /* Adjusted font size for mobile */
+    font-size: 1.2rem; 
     transition: color 0.3s, text-shadow 0.3s;
 }
 
@@ -75,9 +74,9 @@ nav ul:hover {
     visibility: visible;
 }
 
-/* Hero Section */
+
 .hero-section {
-    height: 95vh; /* Adjusted height for smaller screens */
+    height: 95vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,12 +84,12 @@ nav ul:hover {
     text-align: center;
     position: relative;
     color: #ffffff;
-    margin-top: 80px; /* Adjusted to ensure content is below the header */
+    margin-top: 80px; 
 }
 
 .hero-section h2 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.9rem; /* Adjusted font size for mobile */
+    font-size: 2.9rem; 
     margin-top: -30px;
     margin-bottom: 8%;
     animation: glow 2s infinite alternate;
@@ -98,28 +97,28 @@ nav ul:hover {
 
 .upper-post h2 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.9rem; /* Adjusted font size for mobile */
+    font-size: 2.9rem; 
     
     animation: glow 2s infinite alternate;
 }
 
 .abouth2 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.9rem; /* Adjusted font size for mobile */
+    font-size: 2.9rem; 
     margin-top: 0px !important;
     margin-bottom: 0px !important;
     animation: glow 2s infinite alternate;
 }
 
 .hero-content {
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for text readability */
-    padding: 10px; /* Reduced padding for smaller screens */
-    border-radius: 10px; /* Rounded corners for a modern look */
-    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4); /* Glowing effect */
+    background: rgba(0, 0, 0, 0.6); 
+    padding: 10px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4); 
 }
 
 .hero-text {
-    font-size: 1.2rem; /* Adjusted size for smaller screens */
+    font-size: 1.2rem; 
     line-height: 1.4;
     color: #00ffcc;
     text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
@@ -142,19 +141,19 @@ nav ul:hover {
 }
 
 .hero-section p {
-    font-size: 1.4rem; /* Adjusted size for smaller screens */
+    font-size: 1.4rem; 
 }
 
-/* Blog Section */
+
 .blog-section {
-    padding: 30px 10px; /* Adjusted padding for smaller screens */
+    padding: 30px 10px; 
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     padding-top: 100px;
 }
 
 .blog-section2 {
-    padding: 30px 10px; /* Adjusted padding for smaller screens */
+    padding: 30px 10px; 
     
     backdrop-filter: blur(10px);
     padding-top: 100px;
@@ -162,8 +161,8 @@ nav ul:hover {
 .blog-section2 h2 {
     font-family: 'Orbitron', sans-serif;
     text-align: center;
-    margin-bottom: 20px; /* Adjusted margin for smaller screens */
-    font-size: 2rem; /* Adjusted font size for mobile */
+    margin-bottom: 20px; 
+    font-size: 2rem; 
     color: #00ffcc;
     text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
 }
@@ -171,8 +170,8 @@ nav ul:hover {
 .blog-section h2 {
     font-family: 'Orbitron', sans-serif;
     text-align: center;
-    padding-bottom: 40px; /* Adjusted margin for smaller screens */
-    font-size: 2rem; /* Adjusted font size for mobile */
+    padding-bottom: 40px; 
+    font-size: 2rem; 
     color: #00ffcc;
     text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
 }
@@ -181,17 +180,17 @@ nav ul:hover {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center align items */
+    justify-content: center; 
 }
 
 .blog-post {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    margin: 10px; /* Reduced margin for smaller screens */
-    padding: 10px; /* Reduced padding for smaller screens */
+    margin: 10px; 
+    padding: 10px; 
     border-radius: 10px;
-    width: 100%; /* Full width on small screens */
-    max-width: 300px; /* Max width for larger screens */
+    width: 100%; 
+    max-width: 300px; 
     transition: transform 0.3s, box-shadow 0.3s;
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -215,7 +214,7 @@ nav ul:hover {
     cursor: url(https://cdn.custom-cursor.com/db/4731/32/arrow2699.png), pointer !important;
     color: #00ffcc;
     text-decoration: none;
-    display: block; /* Ensures the entire block is clickable */
+    display: block; 
     margin-bottom: 10px;
 }
 
@@ -223,7 +222,7 @@ nav ul:hover {
     color: #ffffff;
 }
 
-/* Footer */
+
 footer {
     text-align: center;
     padding: 20px 0;
@@ -233,7 +232,7 @@ footer {
     margin-top: auto;
 }
 
-/* Animations */
+
 @keyframes glow {
     from {
         text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc;
@@ -243,7 +242,6 @@ footer {
     }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .blog-posts {
         flex-direction: column;
@@ -253,7 +251,7 @@ footer {
         z-index: -1 !important;
     }
     .hero-section {
-        margin-top: 60px; /* Adjusted for smaller screens */
+        margin-top: 60px; 
     }
     header h1 {
         font-size: 1.2rem;
@@ -266,9 +264,9 @@ footer {
     background-color: transparent;
     color: #00ffcc;
     border: 2px solid #00ffcc;
-    padding: 8px 16px; /* Reduced padding for smaller screens */
+    padding: 8px 16px; 
     text-transform: uppercase;
-    font-size: 0.9rem; /* Adjusted font size for mobile */
+    font-size: 0.9rem; 
     cursor: pointer;
     transition: color 0.3s, box-shadow 0.3s;
     text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
@@ -294,18 +292,18 @@ canvas {
     /*z-index: 1;*/
 }
 
-/* Header Background Invisible */
+
 header {
     background-color: transparent;
     border-bottom: none;
 }
 
-/* Header Background Visible on Scroll */
+
 header.scrolled {
     background: linear-gradient(135deg, rgba(15, 12, 41, 0.8), rgba(48, 43, 99, 0.8), rgba(36, 36, 62, 0.8));
     border-bottom: 1px solid rgba(0, 255, 204, 0.4);
     box-shadow: 0 4px 10px rgba(0, 255, 204, 0.2);
-    backdrop-filter: blur(10px); /* Adds a glassmorphism effect */
+    backdrop-filter: blur(10px); 
     animation: pulse 3s infinite alternate;
 }
 
@@ -321,10 +319,10 @@ header.scrolled {
 header.scrolled nav ul {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0); /* Moves into view */
+    transform: translateY(0); 
 }
 
-/* Search Bar */
+
 .search-bar {
     text-align: center;
     margin-bottom: 20px;
@@ -348,14 +346,14 @@ header.scrolled nav ul {
     box-shadow: 0 0 20px rgba(0, 255, 204, 0.8);
 }
 
-/* Adjust the layout for small screens */
+
 @media (max-width: 768px) {
     #searchInput {
         width: 90%;
     }
 }
 
-/* Futuristic Button */
+
 .futuristic-button {
     display: inline-block;
     padding: 12px 24px;
@@ -405,7 +403,7 @@ header.scrolled nav ul {
 
 
 
-/* Easter Egg Effect */
+
 body.easter-egg {
     background: linear-gradient(135deg, #ff0000, #ff9900, #ffcc00);
     color: #000000;
@@ -421,9 +419,9 @@ body.easter-egg {
     margin-top: 20px;
 }
 
-/* Responsive Design for Hero Section */
+
 .hero-section {
-    height: 95vh; /* Adjusted height for smaller screens */
+    height: 95vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -431,11 +429,10 @@ body.easter-egg {
     text-align: center;
     position: relative;
     color: #ffffff;
-    margin-top: 80px; /* Adjusted to ensure content is below the header */
-}
+    margin-top: 80px; 
 
 .hero-section3 {
-    height: 70vh; /* Adjusted height for smaller screens */
+    height: 70vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -443,9 +440,8 @@ body.easter-egg {
     text-align: center;
     position: relative;
     color: #ffffff;
-    margin-top: 80px; /* Adjusted to ensure content is below the header */
+    margin-top: 80px; 
 }
-
 .hero-content {
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
@@ -453,7 +449,7 @@ body.easter-egg {
     box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
 }
 
-/* Futuristic Button */
+
 .futuristic-button {
     display: inline-block;
     padding: 12px 24px;
@@ -498,7 +494,7 @@ body.easter-egg {
 }
 
 
- /* Responsive Design */
+ 
  @media (max-width: 768px) {
    
 
@@ -522,26 +518,26 @@ body.easter-egg {
 
 
 .post {
-    background: rgba(0, 0, 0, 0.6); /* Dark background for contrast */
-    color: #00ffcc; /* Futuristic neon color for text */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Space around the content */
-    margin-bottom: 20px; /* Space between posts */
-    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4), 0 0 25px rgba(0, 255, 204, 0.2); /* Glowing effect */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+    background: rgba(0, 0, 0, 0.6); 
+    color: #00ffcc; 
+    border-radius: 10px; 
+    padding: 20px; 
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4), 0 0 25px rgba(0, 255, 204, 0.2); 
+    transition: transform 0.3s, box-shadow 0.3s; 
     margin-left: 50px;
     margin-right: 50px;
 }
 
 .upper-post {
-    background: rgba(0, 0, 0, 0.6); /* Dark background for contrast */
-    color: #00ffcc; /* Futuristic neon color for text */
+    background: rgba(0, 0, 0, 0.6); 
+    color: #00ffcc; 
     border-bottom-right-radius: 100px;
     border-bottom-left-radius: 100px;
     
-    margin-bottom: 20px; /* Space between posts */
-    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4), 0 0 25px rgba(0, 255, 204, 0.2); /* Glowing effect */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+    margin-bottom: 20px; 
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4), 0 0 25px rgba(0, 255, 204, 0.2); 
+    transition: transform 0.3s, box-shadow 0.3s; 
     margin-left: 50px;
     margin-right: 50px;
     padding-top: 100px;
@@ -550,36 +546,35 @@ body.easter-egg {
 }
 
 .post:hover {
-    transform: translateY(-10px); /* Lift effect on hover */
-    box-shadow: 0 0 25px rgba(0, 255, 204, 0.8), 0 0 40px rgba(0, 255, 204, 0.6); /* Stronger glow on hover */
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.8), 0 0 40px rgba(0, 255, 204, 0.6); 
 }
 
 .post h2 {
-    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    font-family: 'Orbitron', sans-serif; 
     font-size: 1.8rem;
     text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
     margin-bottom: 10px;
 }
 
 .post p {
-    line-height: 1.6; /* Increase line spacing for readability */
+    line-height: 1.6; 
     font-size: 1rem;
 }
 
-/* IMAGE CSS */
+
 .post-image {
     width: 300px;
     height: auto;
     border-radius: 10px;
     margin-bottom: 10px;
-    box-shadow: 0 0 10px rgba(0, 255, 204, 0.4), 0 0 15px rgba(0, 255, 204, 0.2); /* Glowing effect */
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.4), 0 0 15px rgba(0, 255, 204, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .post-image:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 0 20px rgba(0, 255, 204, 0.8), 0 0 30px rgba(0, 255, 204, 0.6); /* Stronger glow on hover */
+    transform: scale(1.05); 
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.8), 0 0 30px rgba(0, 255, 204, 0.6); 
     cursor: url(https://cdn.custom-cursor.com/db/4731/32/arrow2699.png), pointer !important;
 }
-
-
+}
