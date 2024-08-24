@@ -64,61 +64,61 @@ document.addEventListener('DOMContentLoaded', function() {
 var canvas = document.getElementById("canvas"),
     ctx = canvas.getContext('2d');
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
 var stars = [],
     FPS = 60,
-    starCount = 100, // Reduced star count for performance
+    starCount = 100, // Default star count
     mouse = {
       x: 0,
       y: 0
     };
 
-// Adjust the number of stars based on screen size
-if (window.innerWidth < 768) {
-    starCount = 25; // Further reduce stars on mobile devices
+// Set canvas size
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  // Adjust star count based on screen size
+  starCount = window.innerWidth < 768 ? 25 : 100;
+  initializeStars();
 }
 
-// Create stars
-for (var i = 0; i < starCount; i++) {
-  stars.push({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    radius: Math.random() * 1 + 0.5, // Smaller stars
-    vx: Math.random() * 0.5 - 0.25,  // Slower movement for less redraws
-    vy: Math.random() * 0.5 - 0.25
-  });
+// Create and initialize stars
+function initializeStars() {
+  stars = [];
+  for (var i = 0; i < starCount; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 1 + 0.5,
+      vx: Math.random() * 0.5 - 0.25,
+      vy: Math.random() * 0.5 - 0.25
+    });
+  }
 }
 
 // Draw the scene
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  for (var i = 0; i < stars.length; i++) {
-    var s = stars[i];
-
-    ctx.fillStyle = "#ffffff";
+  ctx.fillStyle = "#ffffff";
+  stars.forEach(s => {
     ctx.beginPath();
     ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
     ctx.fill();
-  }
+  });
 
   // Connecting lines between stars
   ctx.beginPath();
-  for (var i = 0; i < stars.length; i++) {
-    var starI = stars[i];
-    ctx.moveTo(starI.x, starI.y);
-    if (distance(mouse, starI) < 100) ctx.lineTo(mouse.x, mouse.y); // Reduced distance for connections
-    for (var j = 0; j < stars.length; j++) {
-      var starII = stars[j];
+  stars.forEach(starI => {
+    if (distance(mouse, starI) < 100) ctx.lineTo(mouse.x, mouse.y);
+    stars.forEach(starII => {
       if (distance(starI, starII) < 100) {
         ctx.lineTo(starII.x, starII.y);
       }
-    }
-  }
+    });
+  });
   ctx.lineWidth = 0.1;
-  ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)'; // Light and thin lines
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
   ctx.stroke();
 }
 
@@ -126,33 +126,34 @@ function draw() {
 function distance(point1, point2) {
   var xs = point2.x - point1.x;
   var ys = point2.y - point1.y;
-
   return Math.sqrt(xs * xs + ys * ys);
 }
 
 // Update star positions
 function update() {
-  for (var i = 0; i < stars.length; i++) {
-    var s = stars[i];
-
+  stars.forEach(s => {
     s.x += s.vx;
     s.y += s.vy;
-
     if (s.x < 0 || s.x > canvas.width) s.vx = -s.vx;
     if (s.y < 0 || s.y > canvas.height) s.vy = -s.vy;
-  }
+  });
 }
 
-// Handle mouse movement
+// Handle mouse movement with throttling
+let mouseMoveTimeout;
 canvas.addEventListener('mousemove', function (e) {
-  mouse.x = e.clientX;
-  mouse.y = e.clientY;
+  if (mouseMoveTimeout) clearTimeout(mouseMoveTimeout);
+  mouseMoveTimeout = setTimeout(() => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  }, 100); // Adjust throttle time as needed
 });
 
-// Handle window resize
+// Handle window resize with debouncing
+let resizeTimeout;
 window.addEventListener('resize', function () {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  if (resizeTimeout) clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(resizeCanvas, 100); // Adjust debounce time as needed
 });
 
 // Handle touch events for mobile devices
@@ -161,14 +162,16 @@ document.addEventListener('touchstart', function (e) {
   mouse.y = e.touches[0].clientY;
 });
 
-// Update and draw the scene continuously
 function tick() {
   draw();
   update();
   requestAnimationFrame(tick);
 }
 
+// Initialize canvas and start animation
+resizeCanvas();
 tick();
+
 
 //END background star
 
