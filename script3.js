@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('stars');
     const ctx = canvas.getContext('2d');
-    const baseNumStars = 100; // Base number of stars for larger screens
+    const baseNumStars = 100; 
     const stars = [];
     let numStars = baseNumStars;
 
     function updateStarCount() {
-        // Reduce the number of stars for smaller screens
+        
         const width = window.innerWidth;
         const height = window.innerHeight;
-        if (width < 600) { // Example breakpoint for small screens
-            numStars = Math.floor(baseNumStars * 0.5); // 50% of base number
-        } else if (width < 900) { // Example breakpoint for medium screens
-            numStars = Math.floor(baseNumStars * 0.75); // 75% of base number
+        if (width < 600) { 
+            numStars = Math.floor(baseNumStars * 0.5); 
+        } else if (width < 900) { 
+            numStars = Math.floor(baseNumStars * 0.75); 
         } else {
-            numStars = baseNumStars; // Full number of stars for larger screens
+            numStars = baseNumStars; 
         }
     }
 
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function initializeStars() {
-        stars.length = 0; // Clear existing stars
+        stars.length = 0; 
         for (let i = 0; i < numStars; i++) {
             stars.push(createStar());
         }
@@ -67,10 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
         initializeStars();
     }
 
-    // Initial setup
+    
     onResize();
     animate();
 
-    // Update on resize
+    
     window.addEventListener('resize', onResize);
 });

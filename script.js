@@ -3,32 +3,32 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             title: 'Lorem ipsum dolor sit amet',
             content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            url: 'blog.html' // URL to the blog post page
+            url: 'blog.html' 
         },
         {
           title: 'Lorem ipsum dolor sit amet',
           content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-          url: 'blog.html' // URL to the blog post page
+          url: 'blog.html' 
       },
       {
         title: 'Lorem ipsum dolor sit amet',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        url: 'blog.html' // URL to the blog post page
+        url: 'blog.html' 
     },
     {
       title: 'Lorem ipsum dolor sit amet',
       content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      url: 'blog.html' // URL to the blog post page
+      url: 'blog.html' 
   },
   {
     title: 'Lorem ipsum dolor sit amet',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    url: 'blog.html' // URL to the blog post page
+    url: 'blog.html' 
 },
 {
   title: 'Lorem ipsum dolor sit amet',
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  url: 'blog.html' // URL to the blog post page
+  url: 'blog.html' 
 },
     ];
 
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const blogPost = document.createElement('div');
         blogPost.classList.add('blog-post');
         
-        // Create a link element if URL is provided
+        
         if (post.url) {
             const link = document.createElement('a');
             link.href = post.url;
@@ -59,30 +59,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//START background star
-// Get the canvas and context
+
 var canvas = document.getElementById("canvas"),
     ctx = canvas.getContext('2d');
 
 var stars = [],
     FPS = 60,
-    starCount = 100, // Default star count
+    starCount = 100, 
     mouse = {
       x: 0,
       y: 0
     };
 
-// Set canvas size
+
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
-  // Adjust star count based on screen size
+  
   starCount = window.innerWidth < 768 ? 25 : 100;
   initializeStars();
 }
 
-// Create and initialize stars
+
 function initializeStars() {
   stars = [];
   for (var i = 0; i < starCount; i++) {
@@ -96,7 +95,7 @@ function initializeStars() {
   }
 }
 
-// Draw the scene
+
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -107,7 +106,7 @@ function draw() {
     ctx.fill();
   });
 
-  // Connecting lines between stars
+  
   ctx.beginPath();
   stars.forEach(starI => {
     if (distance(mouse, starI) < 100) ctx.lineTo(mouse.x, mouse.y);
@@ -122,14 +121,14 @@ function draw() {
   ctx.stroke();
 }
 
-// Calculate distance between two points
+
 function distance(point1, point2) {
   var xs = point2.x - point1.x;
   var ys = point2.y - point1.y;
   return Math.sqrt(xs * xs + ys * ys);
 }
 
-// Update star positions
+
 function update() {
   stars.forEach(s => {
     s.x += s.vx;
@@ -139,24 +138,24 @@ function update() {
   });
 }
 
-// Handle mouse movement with throttling
+
 let mouseMoveTimeout;
 canvas.addEventListener('mousemove', function (e) {
   if (mouseMoveTimeout) clearTimeout(mouseMoveTimeout);
   mouseMoveTimeout = setTimeout(() => {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
-  }, 100); // Adjust throttle time as needed
+  }, 100); 
 });
 
-// Handle window resize with debouncing
+
 let resizeTimeout;
 window.addEventListener('resize', function () {
   if (resizeTimeout) clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(resizeCanvas, 100); // Adjust debounce time as needed
+  resizeTimeout = setTimeout(resizeCanvas, 100); 
 });
 
-// Handle touch events for mobile devices
+
 document.addEventListener('touchstart', function (e) {
   mouse.x = e.touches[0].clientX;
   mouse.y = e.touches[0].clientY;
@@ -168,12 +167,11 @@ function tick() {
   requestAnimationFrame(tick);
 }
 
-// Initialize canvas and start animation
-resizeCanvas();
+
 tick();
 
 
-//END background star
+
 
 
 
@@ -189,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
     hiddenIcon.style.right = '20px';
     hiddenIcon.style.width = '4px';
     hiddenIcon.style.height = '4px';
-    hiddenIcon.style.backgroundImage = 'url("IMAGES/dogcow.png")'; // Replace with your icon image
+    hiddenIcon.style.backgroundImage = 'url("IMAGES/dogcow.png")'; 
     hiddenIcon.style.backgroundSize = 'contain';
     hiddenIcon.style.cursor = 'url(https://cdn.custom-cursor.com/db/4731/32/arrow2699.png), pointer';
     document.body.appendChild(hiddenIcon);
@@ -204,29 +202,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     hiddenIcon.addEventListener('click', function() {
         const imagePopup = document.createElement('img');
-        imagePopup.src = 'IMAGES/dogcow.png'; // Replace with your image source
+        imagePopup.src = 'IMAGES/dogcow.png'; 
         imagePopup.style.position = 'fixed';
         imagePopup.style.top = '50%';
         imagePopup.style.left = '50%';
         imagePopup.style.transform = 'translate(-50%, -50%)';
         imagePopup.style.zIndex = '1000';
-        imagePopup.style.width = '300px'; // Adjust the size as needed
+        imagePopup.style.width = '300px'; 
         imagePopup.style.height = 'auto';
         imagePopup.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
         document.body.appendChild(imagePopup);
 
-        // Optional: add a click event to close the image popup
+        
         imagePopup.addEventListener('click', function() {
             document.body.removeChild(imagePopup);
         });
 
-        // Listen for the phrase "I want" typed
+        
         let typedText = '';
 document.addEventListener('keydown', function(event) {
     typedText += event.key.toLowerCase();
     if (typedText.endsWith('?')) {
         showContactButton();
-        typedText = ''; // Reset the typed text after detection
+        typedText = ''; 
     }
 });
 
@@ -250,7 +248,7 @@ document.addEventListener('keydown', function(event) {
             document.body.appendChild(contactButton);
 
             contactButton.addEventListener('click', function() {
-                window.location.href = 'https://www.instagram.com/clarus_dc/';
+                window.location.href = 'index.html';
             });
         }
     });
